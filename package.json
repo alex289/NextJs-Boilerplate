@@ -1,0 +1,42 @@
+{
+  "name": "nextjs-boilerplate",
+  "version": "1.0.0",
+  "description": "nextjs boilerplate website with presets",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "NODE_ENV=production node server.js",
+    "build": "next build",
+    "export": "next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuzouSatoru2/NextJs-Boilerplate.git"
+  },
+  "keywords": [
+    "NextJs",
+    "Express",
+    "Docker"
+  ],
+  "author": "Alex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuzouSatoru2/NextJs-Boilerplate/issues"
+  },
+  "engines": {
+    "npm": ">=6.13.7",
+    "node": ">=10.14.2"
+  },
+  "homepage": "https://github.com/JuzouSatoru2/NextJs-Boilerplate#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "next": "^9.3.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
