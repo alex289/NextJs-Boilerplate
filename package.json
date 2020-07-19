@@ -29,13 +29,12 @@
   },
   "homepage": "https://github.com/JuzouSatoru2/NextJs-Boilerplate#readme",
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "next": "^9.3.5",
+    "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
