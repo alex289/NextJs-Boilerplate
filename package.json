@@ -7,7 +7,8 @@
     "dev": "nodemon server.js",
     "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "export": "next export"
+    "lint": "eslint next.config.js server.js server/** components/** pages/**",
+    "format": "prettier --write next.config.js server.js server/** pages/** components/**"
   },
   "repository": {
     "type": "git",
@@ -29,12 +30,18 @@
   },
   "homepage": "https://github.com/JuzouSatoru2/NextJs-Boilerplate#readme",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "next": "^9.4.4",
+    "next": "^9.5.0",
+    "nprogress": "^0.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
