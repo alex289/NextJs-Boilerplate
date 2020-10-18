@@ -1,4 +1,4 @@
-import Meta from "./meta";
+import Meta from './meta';
 
 const Layout = (props) => (
   <div>
@@ -9,8 +9,8 @@ const Layout = (props) => (
       html {
         height: 100%;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }
 
       *,

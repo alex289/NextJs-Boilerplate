@@ -1,12 +1,12 @@
-const express = require("express");
-const next = require("next");
-const bodyParser = require("body-parser");
-const dev = process.env.NODE_ENV !== "production";
+const express = require('express');
+const next = require('next');
+const bodyParser = require('body-parser');
+const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const port = process.env.PORT || 3000;
-const apiRoutes = require("./server/routes/apiRoutes.js");
+const apiRoutes = require('./server/routes/apiRoutes.js');
 
 app
   .prepare()
@@ -14,10 +14,10 @@ app
     const server = express();
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: false }));
-    server.set("trust proxy", true);
-    server.use("/api", apiRoutes);
+    server.set('trust proxy', true);
+    server.use('/api', apiRoutes);
 
-    server.get("*", (req, res) => {
+    server.get('*', (req, res) => {
       return handle(req, res);
     });
 
@@ -26,9 +26,9 @@ app
         throw err;
       }
       console.log(
-        "\x1b[36minfo",
+        '\x1b[36minfo',
         `\x1b[0m - Ready on http://localhost:${port} in ${
-          dev ? "development" : "production"
+          dev ? 'development' : 'production'
         } mode`
       );
     });
