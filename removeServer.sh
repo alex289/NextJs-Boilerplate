@@ -1,3 +1,4 @@
+#!/bin/bash
 rm server.js
 rm -rf server
 npm uninstall nodemon body-parser express
