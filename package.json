@@ -7,8 +7,8 @@
     "dev": "nodemon server.js",
     "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "lint": "eslint next.config.js server.js server/** components/** pages/**",
-    "format": "prettier --write next.config.js server.js server/** pages/** components/**"
+    "lint": "eslint server.js server/** components/** pages/**",
+    "format": "prettier --write server.js server/** pages/** components/**"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
   },
   "keywords": [
     "NextJs",
-    "Express",
+    "NodeJs",
     "Docker"
   ],
   "author": "Alex",
@@ -31,18 +31,18 @@
   "homepage": "https://github.com/JuzouSatoru2/NextJs-Boilerplate#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.8.1",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-react": "^7.20.6",
-    "nodemon": "^2.0.4",
-    "prettier": "^2.1.1"
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-react": "^7.21.4",
+    "nodemon": "^2.0.5",
+    "prettier": "^2.1.2"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "next": "^9.5.4",
+    "next": "^9.5.5",
     "nprogress": "^0.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   }
 }
