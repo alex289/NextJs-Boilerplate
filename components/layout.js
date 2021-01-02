@@ -1,4 +1,4 @@
-import Meta from './meta';
+import Meta from '@/components/meta';
 
 const Layout = (props) => (
   <div>
