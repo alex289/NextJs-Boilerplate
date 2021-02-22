@@ -4,11 +4,12 @@
   "description": "nextjs boilerplate website with presets",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "NODE_ENV=production node server.js",
+    "dev": "next dev",
+    "start": "next start",
     "build": "next build",
-    "lint": "eslint server.js server/** components/** pages/**",
-    "format": "prettier --write server.js server/** pages/** components/**"
+    "export": "next export",
+    "lint": "eslint components/** pages/**",
+    "format": "prettier --write pages/** components/**"
   },
   "repository": {
     "type": "git",
@@ -30,17 +31,18 @@
   },
   "homepage": "https://github.com/JuzouSatoru2/NextJs-Boilerplate#readme",
   "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^17.0.2",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.19.0",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-react": "^7.22.0",
-    "nodemon": "^2.0.7",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.5"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "next": "^10.0.6",
+    "next": "^10.0.7",
     "nprogress": "^0.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

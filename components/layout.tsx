@@ -1,9 +1,11 @@
+import { ReactNode } from 'react';
+
 import Meta from '@/components/meta';
 
-const Layout = (props) => (
+const Layout = ({ children }: { children: ReactNode }) => (
   <div>
     <Meta></Meta>
-    {props.children}
+    {children}
     <style jsx global>{`
       body,
       html {

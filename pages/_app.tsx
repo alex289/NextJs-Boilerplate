@@ -1,4 +1,6 @@
+import type { AppProps } from 'next/app';
 import Router from 'next/router';
+
 import NProgress from 'nprogress';
 
 Router.events.on('routeChangeStart', () => {
@@ -7,7 +9,7 @@ Router.events.on('routeChangeStart', () => {
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Component {...pageProps} />

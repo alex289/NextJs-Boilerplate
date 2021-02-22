@@ -27,19 +27,19 @@
 ## Install
 
 ```sh
-npm install
+yarn
 ```
 
 ## Run in production
 
 ```sh
-npm run start
+yarn start
 ```
 
 ## Run in development
 
 ```sh
-npm run dev
+yarn dev
 ```
 
 ## Author
