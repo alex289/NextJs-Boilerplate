@@ -4,7 +4,7 @@ WORKDIR /usr/app
 
 COPY ./package*.json ./
 
-RUN yarn install --production
+RUN yarn install --frozen-lockfile
 
 COPY ./ ./
 
