@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
           pointer-events: none;
         }
         #nprogress .bar {
-          background: #8739F9;
+          background: #8739f9;
           position: fixed;
           z-index: 1031;
           top: 0;
@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
           right: 0;
           width: 100px;
           height: 100%;
-          box-shadow: 0 0 10px #8739F9, 0 0 5px #8739F9;
+          box-shadow: 0 0 10px #8739f9, 0 0 5px #8739f9;
           opacity: 1;
           -webkit-transform: rotate(3deg) translate(0, -4px);
           -ms-transform: rotate(3deg) translate(0, -4px);
@@ -51,8 +51,8 @@ export default function App({ Component, pageProps }: AppProps) {
           height: 18px;
           box-sizing: border-box;
           border: solid 2px transparent;
-          border-top-color: #8739F9;
-          border-left-color: #8739F9;
+          border-top-color: #8739f9;
+          border-left-color: #8739f9;
           border-radius: 50%;
           -webkit-animation: nprogress-spinner 0.4s linear infinite;
           animation: nprogress-spinner 0.4s linear infinite;

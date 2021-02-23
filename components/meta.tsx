@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const Meta = ({title= "NextJs boilerplate"}: {title?: String}) => (
+const Meta = ({ title = 'NextJs boilerplate' }: { title?: String }) => (
   <Head>
     <title>{title}</title>
   </Head>
