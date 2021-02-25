@@ -1,5 +1,5 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "env": {
         "browser": true,
         "es2020": true,
@@ -8,6 +8,7 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
         "prettier"
     ],
     "globals": {
@@ -23,11 +24,13 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "@typescript-eslint"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
         "no-undef": "off",
         "semi": "warn",
         "eqeqeq": "warn",
