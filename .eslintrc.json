@@ -2,8 +2,7 @@
     "parser": "@typescript-eslint/parser",
     "env": {
         "browser": true,
-        "es2020": true,
-        "commonjs": true
+        "es2021": true
     },
     "extends": [
         "eslint:recommended",
@@ -20,7 +19,7 @@
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 11,
+        "ecmaVersion": 12,
         "sourceType": "module"
     },
     "plugins": [
