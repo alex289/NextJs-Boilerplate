@@ -1,8 +1,11 @@
 import type { AppProps } from 'next/app';
 import Router from 'next/router';
 
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from '@theme';
+
 import NProgress from 'nprogress';
-import '../style.css';
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start();
@@ -13,7 +16,10 @@ Router.events.on('routeChangeError', () => NProgress.done());
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div>
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <CssBaseline></CssBaseline>
+        <Component {...pageProps} />
+      </ThemeProvider>
       <style jsx global>{`
         #nprogress {
           pointer-events: none;
