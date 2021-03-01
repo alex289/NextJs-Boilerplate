@@ -2,7 +2,6 @@
   "name": "nextjs-boilerplate",
   "version": "1.0.0",
   "description": "nextjs boilerplate website with presets",
-  "main": "server.js",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
@@ -26,8 +25,8 @@
     "url": "https://github.com/JuzouSatoru2/NextJs-Boilerplate/issues"
   },
   "engines": {
-    "npm": ">=6.13.7",
-    "node": ">=10.14.2"
+    "yarn": ">=1.22.10",
+    "node": ">=14.15.0"
   },
   "homepage": "https://github.com/JuzouSatoru2/NextJs-Boilerplate#readme",
   "devDependencies": {
