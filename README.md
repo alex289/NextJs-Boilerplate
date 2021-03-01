@@ -1,15 +1,12 @@
 <h1 align="center">Welcome to NextJs boilerplate 👋</h1>
 <p>
   <img src="https://img.shields.io/github/package-json/v/JuzouSatoru2/NextJs-Boilerplate" />
-  <img src="https://img.shields.io/badge/npm-%3E%3D6.13.7-blue.svg" />
-  <img src="https://img.shields.io/badge/node-%3E%3D10.14.2-blue.svg" />
-  <a href="https://github.com/JuzouSatoru2/NextJs-Boilerplate#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
+  <img src="https://img.shields.io/badge/yarn-%3E%3D1.22.10-blue.svg" />
+  <img src="https://img.shields.io/badge/node-%3E%3D14.15.0-blue.svg" />
   <a href="https://github.com/JuzouSatoru2/NextJs-Boilerplate/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/JuzouSatoru2/NextJs-Boilerplate/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/JuzouSatoru2/NextJs-Boilerplate/blob/main/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/JuzouSatoru2/nextjs-boilerplate" />
   </a>
   <a href="https://www.codacy.com/manual/mccr4fthd/NextJs-Boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JuzouSatoru2/NextJs-Boilerplate&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/6caac38357384b81b636597d9a386621"/></a>
@@ -21,8 +18,8 @@
 
 ## Prerequisites
 
-- npm >=6.13.7
-- node >=10.14.2
+- yarn >=1.22.10
+- node >=14.15.0
 
 ## Install
 
@@ -46,7 +43,6 @@ yarn dev
 
 👤 **Alex**
 
-* Website: juzousatoru2.github.io
 * Github: [@JuzouSatoru2](https://github.com/JuzouSatoru2)
 
 ## 🤝 Contributing
@@ -59,8 +55,8 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2020 [Alex](https://github.com/JuzouSatoru2).<br />
-This project is [MIT](https://github.com/JuzouSatoru2/NextJs-Boilerplate/blob/master/LICENSE) licensed.
+Copyright © 2021 [Alex](https://github.com/JuzouSatoru2).<br />
+This project is [MIT](https://github.com/JuzouSatoru2/NextJs-Boilerplate/blob/main/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
