@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JuzouSatoru2/NextJs-Boilerplate.git"
+    "url": "git+https://github.com/Alex289/NextJs-Boilerplate.git"
   },
   "keywords": [
     "NextJs",
@@ -22,13 +22,13 @@
   "author": "Alex",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JuzouSatoru2/NextJs-Boilerplate/issues"
+    "url": "https://github.com/Alex289/NextJs-Boilerplate/issues"
   },
   "engines": {
     "yarn": ">=1.22.10",
     "node": ">=14.15.0"
   },
-  "homepage": "https://github.com/JuzouSatoru2/NextJs-Boilerplate#readme",
+  "homepage": "https://github.com/Alex289/NextJs-Boilerplate#readme",
   "devDependencies": {
     "@types/node": "^14.14.35",
     "@types/nprogress": "^0.2.0",
