@@ -7,7 +7,7 @@
     "start": "next start",
     "build": "next build",
     "export": "next export",
-    "lint": "eslint components/** pages/**",
+    "lint": "next lint",
     "format": "prettier --write pages/** components/**"
   },
   "repository": {
@@ -24,27 +24,22 @@
   "bugs": {
     "url": "https://github.com/Alex289/NextJs-Boilerplate/issues"
   },
-  "engines": {
-    "yarn": ">=1.22.10",
-    "node": ">=14.15.0"
-  },
   "homepage": "https://github.com/Alex289/NextJs-Boilerplate#readme",
   "devDependencies": {
-    "@types/node": "^15.6.1",
+    "@types/node": "^15.12.2",
     "@types/nprogress": "^0.2.0",
-    "@types/react": "^17.0.8",
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
-    "@typescript-eslint/parser": "^4.25.0",
-    "eslint": "^7.27.0",
+    "@types/react": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "eslint": "^7.28.0",
+    "eslint-config-next": "^11.0.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-react": "^7.23.2",
-    "prettier": "^2.3.0",
+    "prettier": "^2.3.1",
     "typescript": "^4.3.2"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
-    "next": "^10.2.3",
+    "next": "^11.0.0",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
