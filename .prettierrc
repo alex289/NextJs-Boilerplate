@@ -4,5 +4,5 @@
   "jsxBracketSameLine": true,
   "jsxSingleQuote": false,
   "singleQuote": true,
-  "parser": "babel"
+  "parser": "typescript"
 }
