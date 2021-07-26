@@ -26,18 +26,18 @@
   },
   "homepage": "https://github.com/Alex289/NextJs-Boilerplate#readme",
   "devDependencies": {
-    "@types/node": "^16.3.1",
+    "@types/node": "^16.4.3",
     "@types/nprogress": "^0.2.0",
-    "@types/react": "^17.0.14",
-    "@typescript-eslint/eslint-plugin": "^4.28.3",
-    "eslint": "^7.30.0",
+    "@types/react": "^17.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "eslint": "^7.31.0",
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.1",
+    "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.11.2",
     "next": "^11.0.1",
     "nprogress": "^0.2.0",
