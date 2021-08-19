@@ -6,8 +6,8 @@ const Layout = ({
   children,
   title,
 }: {
-  children: ReactNode,
-  title?: string,
+  children: ReactNode;
+  title?: string;
 }) => (
   <>
     <Meta title={title}></Meta>
