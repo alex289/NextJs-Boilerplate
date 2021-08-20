@@ -1,4 +1,7 @@
 <h1 align="center">Welcome to NextJs boilerplate 👋</h1>
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAlex289%2FNextJs-Boilerplate)
+
 <p>
   <img src="https://img.shields.io/github/package-json/v/Alex289/NextJs-Boilerplate" />
   <img src="https://img.shields.io/badge/yarn-%3E%3D1.22.10-blue.svg" />

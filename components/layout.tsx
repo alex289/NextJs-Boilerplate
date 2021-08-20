@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import Container from '@material-ui/core/Container';
+
 import Meta from '@/components/meta';
 
 const Layout = ({
@@ -11,7 +13,9 @@ const Layout = ({
 }) => (
   <>
     <Meta title={title}></Meta>
-    {children}
+    <Container>
+      <div>{children}</div>
+    </Container>
   </>
 );
 
