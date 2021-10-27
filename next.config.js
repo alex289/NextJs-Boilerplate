@@ -1,5 +1,6 @@
 module.exports = {
   reactStrictMode: true,
+  swcMinify: true,
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       Object.assign(config.resolve.alias, {
