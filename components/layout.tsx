@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import Meta from '@/components/meta';
-import ThemeButton from '@/components/theme-button';
+import Navbar from '@/components/navbar';
 
 const Layout = ({
   children,
@@ -10,16 +10,11 @@ const Layout = ({
   children: ReactNode;
   title?: string;
 }) => (
-  <div className="bg-white dark:bg-black">
+  <>
     <Meta title={title} />
-    <ThemeButton />
-    <main
-      className="flex flex-col justify-center px-8 bg-white dark:bg-black"
-      id="skip"
-    >
-      {children}
-    </main>
-  </div>
+    <Navbar />
+    <main className="container mx-auto">{children}</main>
+  </>
 );
 
 export default Layout;
