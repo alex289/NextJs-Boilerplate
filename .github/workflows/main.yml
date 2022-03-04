@@ -34,6 +34,15 @@ jobs:
           ${{ runner.os }}-build-
           ${{ runner.os }}-
 
+    - name: Cache next build
+      uses: actions/cache@v2
+      id: restore-build-cache
+      env:
+        cache-name: cache-next-build
+      with:
+        path: .next/cache
+        key: ${{ runner.os }}-build-${{ env.cache-name }}
+
     - name: Install yarn
       run: npm install -g yarn
 
