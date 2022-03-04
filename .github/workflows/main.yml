@@ -22,19 +22,24 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Cache node modules
+      id: cache-nodemodules
       uses: actions/cache@v2
       env:
         cache-name: cache-node-modules
       with:
-        path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        path: node_modules
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-build-${{ env.cache-name }}-
           ${{ runner.os }}-build-
           ${{ runner.os }}-
 
     - run: npm install -g yarn
-    - run: yarn
+
+    - name: Install dependencies
+      if: steps.cache-nodemodules.outputs.cache-hit != 'true'
+      run: yarn install --frozen-lockfile
+
     - run: yarn format
     - run: yarn lint
     - run: yarn build
