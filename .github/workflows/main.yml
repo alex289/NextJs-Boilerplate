@@ -34,13 +34,19 @@ jobs:
           ${{ runner.os }}-build-
           ${{ runner.os }}-
 
-    - run: npm install -g yarn
+    - name: Install yarn
+      run: npm install -g yarn
 
     - name: Install dependencies
       if: steps.cache-nodemodules.outputs.cache-hit != 'true'
       run: yarn install --frozen-lockfile
 
-    - run: yarn format
-    - run: yarn lint
-    - run: yarn build
+    - name: Format
+      run: yarn format
+
+    - name: Lint
+      run: yarn lint
+
+    - name: Build
+      run: yarn build
 #   - run: yarn test
