@@ -22,6 +22,3 @@ yarn add next-auth
 - Add SessionProvider to _app
 - Create `/api/auth/[...nextauth].ts`
 - Use `UseSession` in components
-
-
-> If your pages keep freezing after build downgrade preact to 10.6.5 or below (Maybe remove "react/jsx-runtime.js" replacement in `next.config.js`).
