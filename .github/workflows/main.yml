@@ -43,7 +43,8 @@ jobs:
         path: .next/cache
         key: ${{ runner.os }}-build-${{ env.cache-name }}
 
-    - uses: pnpm/action-setup@v2.2.2
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2.2.2
       with:
         version: 6.0.2
 
