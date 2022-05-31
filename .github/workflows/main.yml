@@ -43,19 +43,20 @@ jobs:
         path: .next/cache
         key: ${{ runner.os }}-build-${{ env.cache-name }}
 
-    - name: Install yarn
-      run: npm install -g yarn
+    - uses: pnpm/action-setup@v2.2.2
+      with:
+        version: 6.0.2
 
     - name: Install dependencies
       if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-      run: yarn install --frozen-lockfile
+      run: pnpm i --frozen-lockfile
 
     - name: Format
-      run: yarn format
+      run: pnpm format
 
     - name: Lint
-      run: yarn lint
+      run: pnpm lint
 
     - name: Build
-      run: yarn build
+      run: pnpm build
 #   - run: yarn test
