@@ -13,7 +13,7 @@ const Layout = ({
   <>
     <Meta title={title} />
     <Navbar />
-    <main className="container mx-4 sm:mx-auto">{children}</main>
+    <main className="container px-10">{children}</main>
   </>
 );
 
