@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "next": "12.2.1-canary.3",
+    "next": "12.2.0",
     "next-themes": "^0.2.0",
     "nprogress": "^0.2.0",
     "preact": "^10.9.0",
