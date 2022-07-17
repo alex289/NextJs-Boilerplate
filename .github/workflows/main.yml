@@ -64,11 +64,21 @@ jobs:
     - name: Build
       run: pnpm build
 
+    - uses: actions/cache@v3
+      with:
+        path: ./*
+        key: ${{ github.sha }}-${{ github.run_number }}
+
   stats:
     if: ${{ success() }}
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/cache@v3
+        with:
+          path: ./*
+          key: ${{ github.sha }}-${{ github.run_number }}
+
       - name: Analyze bundle
         run: npx -p nextjs-bundle-analysis report
 
