@@ -12,9 +12,9 @@ const Navbar = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <nav className="z-50 flex items-center justify-between w-full max-w-4xl p-3 mx-auto my-0 text-gray-900 custom-nav md:p-0 bg-gray-50 md:my-8 dark:bg-gray-800 dark:text-gray-100">
+    <nav className="custom-nav z-50 mx-auto my-0 flex w-full max-w-4xl items-center justify-between bg-gray-50 p-3 text-gray-900 dark:bg-gray-800 dark:text-gray-100 md:my-8 md:p-0">
       <div>
-        <h1 className="p-1 text-xl font-semibold text-gray-900 sm:p-4 dark:text-gray-100">
+        <h1 className="p-1 text-xl font-semibold text-gray-900 dark:text-gray-100 sm:p-4">
           <Link href="/">NavTitle</Link>
         </h1>
       </div>
@@ -24,11 +24,11 @@ const Navbar = () => {
             <div>
               <button
                 type="button"
-                className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium"
+                className="inline-flex w-full justify-center px-4 py-2 text-sm font-medium"
                 onClick={() => setShowDropdown(showDropdown ? false : true)}>
                 Dropdown
                 <svg
-                  className="w-5 h-5 ml-2"
+                  className="ml-2 h-5 w-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
 
             {showDropdown && (
-              <div className="absolute right-0 w-56 mt-2 bg-gray-100 shadow-lg dark:bg-gray-700 origin-top-right rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-gray-100 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-700">
                 <div className="py-1" role="none">
                   <div className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100">
                     Item 1
@@ -56,7 +56,7 @@ const Navbar = () => {
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="w-10 h-10 p-3 mr-1 bg-gray-200 rounded-lg dark:bg-gray-700 md:mr-3 ring-gray-300 hover:ring-4"
+          className="mr-1 h-10 w-10 rounded-lg bg-gray-200 p-3 ring-gray-300 hover:ring-4 dark:bg-gray-700 md:mr-3"
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
           {mounted && (
             <svg
@@ -64,7 +64,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               fill="currentColor"
               stroke="currentColor"
-              className="w-4 h-4 text-gray-800 dark:text-gray-200">
+              className="h-4 w-4 text-gray-800 dark:text-gray-200">
               {resolvedTheme === 'dark' ? (
                 <path
                   strokeLinecap="round"
