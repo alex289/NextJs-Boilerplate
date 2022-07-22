@@ -32,7 +32,7 @@
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "autoprefixer": "^10.4.7",
     "eslint": "^8.20.0",
-    "eslint-config-next": "12.2.2",
+    "eslint-config-next": "12.2.3",
     "eslint-config-prettier": "^8.5.0",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "next": "12.2.2",
+    "next": "12.2.3",
     "next-themes": "^0.2.0",
     "nprogress": "^0.2.0",
     "preact": "^10.10.0",
