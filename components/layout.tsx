@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
 
 import Meta from '@/components/meta';
 import Navbar from '@/components/navbar';
@@ -13,7 +13,9 @@ const Layout = ({
   <>
     <Meta title={title} />
     <Navbar />
-    <main className="container px-10">{children}</main>
+    <main className="container px-10">
+      <Suspense>{children}</Suspense>
+    </main>
   </>
 );
 
