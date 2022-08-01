@@ -2,6 +2,10 @@
 
 Boilerplate for a faster Next.Js workflow.
 
+```
+npx create-next-app --use-pnpm --example https://github.com/alex289/NextJs-Boilerplate
+```
+
 - **Framework**: [Next.js](https://nextjs.org/)
 - **ORM**: [Prisma](https://prisma.io/)
 - **Authentication**: [NextAuth.js](https://next-auth.js.org/)
