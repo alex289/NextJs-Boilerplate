@@ -61,6 +61,9 @@ jobs:
     - name: Lint
       run: pnpm lint
 
+    - name: Generate prisma
+      run: pnpm prisma generate
+
     - name: Build
       run: pnpm build
 
