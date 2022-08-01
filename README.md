@@ -3,6 +3,8 @@
 Boilerplate for a faster Next.Js workflow.
 
 - **Framework**: [Next.js](https://nextjs.org/)
+- **ORM**: [Prisma](https://prisma.io/)
+- **Authentication**: [NextAuth.js](https://next-auth.js.org/)
 - **Deployment**: [Vercel](https://vercel.com)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 
