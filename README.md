@@ -1,4 +1,6 @@
-# Nextjs Boilerplate
+![cover](https://repository-images.githubusercontent.com/256284214/d6d1cc69-d944-4e4e-97dc-c21fd0db21a5)
+
+# Next.js Boilerplate
 
 Boilerplate for a faster Next.Js workflow.
 

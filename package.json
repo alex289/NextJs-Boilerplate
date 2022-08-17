@@ -15,23 +15,26 @@
     "url": "git+https://github.com/Alex289/NextJs-Boilerplate.git"
   },
   "keywords": [
-    "NextJs",
+    "Next.js",
     "NodeJs",
-    "Docker"
+    "Vercel"
   ],
-  "author": "Alex",
+  "author": {
+    "name": "Alexander Konietzko",
+    "url": "https://alexanderkonietzko.vercel.app"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Alex289/NextJs-Boilerplate/issues"
   },
-  "homepage": "https://github.com/Alex289/NextJs-Boilerplate#readme",
+  "homepage": "https://next-js-boilerplate-sable.vercel.app",
   "devDependencies": {
-    "@types/node": "^18.7.2",
+    "@types/node": "^18.7.5",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.17",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
     "autoprefixer": "^10.4.8",
-    "eslint": "^8.21.0",
+    "eslint": "^8.22.0",
     "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
     "postcss": "^8.4.16",
