@@ -7,6 +7,7 @@ import NProgress from 'nprogress';
 
 import '@/styles/global.css';
 import 'nprogress/nprogress.css';
+import { Session } from 'next-auth';
 
 NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', () => {
@@ -17,10 +18,10 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function App({
   Component,
-  pageProps: { session, ...pageProps },
-}: AppProps): JSX.Element {
+  pageProps,
+}: AppProps<{ session: Session }>) {
   return (
-    <SessionProvider session={session}>
+    <SessionProvider session={pageProps.session}>
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>
