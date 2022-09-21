@@ -1,4 +1,3 @@
-import type { AppProps } from 'next/app';
 import Router from 'next/router';
 
 import { SessionProvider } from 'next-auth/react';
@@ -7,7 +6,9 @@ import NProgress from 'nprogress';
 
 import '@/styles/global.css';
 import 'nprogress/nprogress.css';
-import { Session } from 'next-auth';
+
+import type { AppType } from 'next/app';
+import type { Session } from 'next-auth';
 
 NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', () => {
@@ -16,15 +17,17 @@ Router.events.on('routeChangeStart', () => {
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-export default function App({
+const App: AppType<{ session: Session | null }> = ({
   Component,
-  pageProps,
-}: AppProps<{ session: Session }>) {
+  pageProps: { session, ...pageProps },
+}) => {
   return (
-    <SessionProvider session={pageProps.session}>
+    <SessionProvider session={session}>
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>
     </SessionProvider>
   );
-}
+};
+
+export default App;
