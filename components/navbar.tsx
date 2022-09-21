@@ -12,7 +12,7 @@ const Navbar = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <nav className="sticky top-0 z-50 mx-auto my-0 flex w-full max-w-4xl items-center justify-between bg-gray-50 p-3 text-gray-900 dark:bg-gray-800 dark:text-gray-100 md:my-8 md:p-0">
+    <nav className="sticky top-0 z-50 mx-auto my-0 flex w-full max-w-4xl items-center justify-between p-3 text-gray-900 dark:text-gray-100 md:my-8 md:p-0">
       <div>
         <h1 className="p-1 text-xl font-semibold text-gray-900 dark:text-gray-100 sm:p-4">
           <Link href="/">NavTitle</Link>
