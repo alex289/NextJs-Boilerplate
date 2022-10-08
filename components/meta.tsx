@@ -20,6 +20,7 @@ const Meta = ({ title = 'NextJs Boilerplate' }: { title?: string }) => {
         name="apple-mobile-web-app-status-bar-style"
         content="black-translucent"
       />
+      <meta name="description" content="Nextjs boilerplate app" />
       <link rel="shortcut icon" href="/static/icon/favicon.ico" />
       {mounted && (
         <meta
