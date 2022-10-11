@@ -27,7 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Cache next build
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ${{ github.workspace }}/.next/cache
         key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
@@ -35,7 +35,7 @@ jobs:
     - name: Setup pnpm
       uses: pnpm/action-setup@v2.2.2
       with:
-        version: 7.1.7
+        version: 7.13.2
         run_install: false
 
     - name: Get pnpm store directory
