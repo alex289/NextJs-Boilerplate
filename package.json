@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "@prisma/client": "^4.4.0",
+    "@vercel/og": "^0.0.18",
     "next": "12.3.1",
     "next-auth": "^4.13.0",
     "next-themes": "^0.2.1",
