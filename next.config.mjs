@@ -2,10 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    legacyBrowsers: false,
-    browsersListForSwc: true,
-  },
   async headers() {
     return [
       {
