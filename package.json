@@ -31,7 +31,7 @@
   },
   "homepage": "https://next-js-boilerplate-sable.vercel.app",
   "devDependencies": {
-    "@types/node": "^18.11.3",
+    "@types/node": "^18.11.4",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.21",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
@@ -48,9 +48,9 @@
   },
   "dependencies": {
     "@prisma/client": "^4.5.0",
-    "@vercel/og": "^0.0.19",
+    "@vercel/og": "^0.0.20",
     "next": "12.3.2-canary.33",
-    "next-auth": "^4.14.0",
+    "next-auth": "^4.15.0",
     "next-themes": "^0.2.1",
     "nprogress": "^0.2.0",
     "react": "^18.2.0",

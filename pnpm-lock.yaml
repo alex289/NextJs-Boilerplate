@@ -2,17 +2,17 @@ lockfileVersion: 5.4
 
 specifiers:
   '@prisma/client': ^4.5.0
-  '@types/node': ^18.11.3
+  '@types/node': ^18.11.4
   '@types/nprogress': ^0.2.0
   '@types/react': ^18.0.21
   '@typescript-eslint/eslint-plugin': ^5.40.1
-  '@vercel/og': ^0.0.19
+  '@vercel/og': ^0.0.20
   autoprefixer: ^10.4.12
   eslint: ^8.26.0
   eslint-config-next: 12.3.1
   eslint-config-prettier: ^8.5.0
   next: 12.3.2-canary.33
-  next-auth: ^4.14.0
+  next-auth: ^4.15.0
   next-themes: ^0.2.1
   nprogress: ^0.2.0
   postcss: ^8.4.18
@@ -27,9 +27,9 @@ specifiers:
 
 dependencies:
   '@prisma/client': 4.5.0_prisma@4.5.0
-  '@vercel/og': 0.0.19
+  '@vercel/og': 0.0.20
   next: 12.3.2-canary.33_biqbaboplfbrettd7655fr4n2y
-  next-auth: 4.14.0_bc6otfssfaca56tugla7tgk5we
+  next-auth: 4.15.0_bc6otfssfaca56tugla7tgk5we
   next-themes: 0.2.1_bc6otfssfaca56tugla7tgk5we
   nprogress: 0.2.0
   react: 18.2.0
@@ -37,7 +37,7 @@ dependencies:
   swr: 1.3.0_react@18.2.0
 
 devDependencies:
-  '@types/node': 18.11.3
+  '@types/node': 18.11.4
   '@types/nprogress': 0.2.0
   '@types/react': 18.0.21
   '@typescript-eslint/eslint-plugin': 5.40.1_bwkkum7thpzegdhw4cb2fa7gxy
@@ -311,8 +311,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node/18.11.3:
-    resolution: {integrity: sha512-fNjDQzzOsZeKZu5NATgXUPsaFaTxeRgFXoosrHivTl8RGeV733OLawXsGfEk9a8/tySyZUyiZ6E8LcjPFZ2y1A==}
+  /@types/node/18.11.4:
+    resolution: {integrity: sha512-BxcJpBu8D3kv/GZkx/gSMz6VnTJREBj/4lbzYOQueUOELkt8WrO6zAcSPmp9uRPEW/d+lUO8QK0W2xnS1hEU0A==}
     dev: true
 
   /@types/nprogress/0.2.0:
@@ -513,12 +513,12 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vercel/og/0.0.19:
-    resolution: {integrity: sha512-1LrPUlCoe8T+aEI1fGdvJDhwewK1/wpYlQnF+E9ERgJMFCnmWH4FA+NYBkQaJqxUUeHoutIxNZTHQFT39+I+BQ==}
+  /@vercel/og/0.0.20:
+    resolution: {integrity: sha512-089P+TfqWz0xBxjOvOhkZIDDtfrLcye94H4IZ+SqxoGPWpNGXaBvRJER/z5SoJxJRcCAL8tPiK5zdjRskM6tLw==}
     engines: {node: '>=16'}
     dependencies:
       '@resvg/resvg-wasm': 2.0.0-alpha.4
-      satori: 0.0.42
+      satori: 0.0.43
       yoga-wasm-web: 0.1.2
     dev: false
 
@@ -912,6 +912,10 @@ packages:
   /electron-to-chromium/1.4.264:
     resolution: {integrity: sha512-AZ6ZRkucHOQT8wke50MktxtmcWZr67kE17X/nAXFf62NIdMdgY6xfsaJD5Szoy84lnkuPWH+4tTNE3s2+bPCiw==}
     dev: true
+
+  /emoji-regex/10.2.1:
+    resolution: {integrity: sha512-97g6QgOk8zlDRdgq1WxwgTMgEWGVAQvB5Fdpgc1MkNy56la5SKP9GsMXKDOdqwn90/41a8yPwIGk1Y6WVbeMQA==}
+    dev: false
 
   /emoji-regex/9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
@@ -1780,8 +1784,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-auth/4.14.0_bc6otfssfaca56tugla7tgk5we:
-    resolution: {integrity: sha512-pD5sin6kq/uIx3Cod2/0JFnViEnngBTTNy4CdfRaYc2QzV2zwpWAbQny2Ezlg0GjEozDhKC53JJxRRE4AmNKEw==}
+  /next-auth/4.15.0_bc6otfssfaca56tugla7tgk5we:
+    resolution: {integrity: sha512-IasNzGLM2VlmyioDdZaRwBBBm8b5xo+zbbqVWHFh0bY6iQUZ3vuudrsdHNdxkXV3LSHdKNaoWEpYr4BydB7mCw==}
     engines: {node: ^12.19.0 || ^14.15.0 || ^16.13.0}
     peerDependencies:
       next: ^12.2.5
@@ -2303,14 +2307,15 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /satori/0.0.42:
-    resolution: {integrity: sha512-ZZaNp2Ya1ACJ4Yf++e9Ccc1Rb6GcKjC9Nhcl4SQFcdM4VqCLfWHR6Iq7AdRCTcJDDuO8u/qGE2Cs+McVoqJenw==}
+  /satori/0.0.43:
+    resolution: {integrity: sha512-SzYwr+LsELWRJU9KMviEOE9TdShry+R5AdS54YQvgAVKFDN4yniAIzwQk1/z2TtIx0ceUT9zTeosWAoWvJBEtQ==}
     engines: {node: '>=16'}
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
       css-background-parser: 0.1.0
       css-box-shadow: 1.0.0-3
       css-to-react-native: 3.0.0
+      emoji-regex: 10.2.1
       postcss-value-parser: 4.2.0
       yoga-layout-prebuilt: 1.10.0
     dev: false
