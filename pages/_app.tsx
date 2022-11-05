@@ -1,4 +1,5 @@
 import Router from 'next/router';
+import { Inter } from '@next/font/google';
 
 import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider } from 'next-themes';
@@ -17,6 +18,8 @@ Router.events.on('routeChangeStart', () => {
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
+const normal = Inter();
+
 const App: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
@@ -24,7 +27,9 @@ const App: AppType<{ session: Session | null }> = ({
   return (
     <SessionProvider session={session}>
       <ThemeProvider attribute="class">
-        <Component {...pageProps} />
+        <div className={normal.className}>
+          <Component {...pageProps} />
+        </div>
       </ThemeProvider>
     </SessionProvider>
   );
