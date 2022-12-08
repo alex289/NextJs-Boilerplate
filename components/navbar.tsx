@@ -2,56 +2,23 @@ import Link from 'next/link';
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import UserMenu from './UserMenu';
 
 const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-
   useEffect(() => setMounted(true), []);
 
   return (
-    <nav className="sticky top-0 z-50 mx-auto my-0 flex w-full max-w-4xl items-center justify-between p-3 text-gray-900 dark:text-gray-100 md:my-8 md:p-0">
+    <nav className="sticky top-0 z-50 mx-auto my-0 flex w-full max-w-5xl items-center justify-between p-3 text-gray-900 dark:text-gray-100 md:my-8 md:p-0">
       <div>
         <h1 className="p-1 text-xl font-semibold text-gray-900 dark:text-gray-100 sm:p-4">
           <Link href="/">NavTitle</Link>
         </h1>
       </div>
-      <div className="flex ">
-        <div className="md:pr-4">
-          <div className="relative inline-block text-left">
-            <div>
-              <button
-                type="button"
-                className="inline-flex w-full justify-center px-4 py-2 text-sm font-medium"
-                onClick={() => setShowDropdown(showDropdown ? false : true)}>
-                Dropdown
-                <svg
-                  className="ml-2 h-5 w-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true">
-                  <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                </svg>
-              </button>
-            </div>
-
-            {showDropdown && (
-              <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-gray-100 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-700">
-                <div className="py-1" role="none">
-                  <div className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100">
-                    Item 1
-                  </div>
-                  <div className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100">
-                    Item 2
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
+      <div className="flex">
+        <UserMenu />
 
         <button
           aria-label="Toggle Dark Mode"
