@@ -8,8 +8,8 @@
     "build": "next build",
     "export": "next export",
     "lint": "next lint",
-    "format": "prettier --write **/*.tsx **/*.ts",
-    "format:check": "prettier --check **/*.tsx **/*.ts",
+    "format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
+    "format:check": "prettier --check \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "typecheck": "tsc --noEmit"
   },
   "repository": {
@@ -58,6 +58,7 @@
     "nprogress": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-wrap-balancer": "^0.3.0",
     "swr": "^2.0.0"
   },
   "nextBundleAnalysis": {

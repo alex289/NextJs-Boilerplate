@@ -1,6 +1,6 @@
 {
-   "files.exclude": {
-      ".next": true
-   },
-   "editor.formatOnSave": true
+  "files.exclude": {
+    ".next": true
+  },
+  "editor.formatOnSave": true
 }
