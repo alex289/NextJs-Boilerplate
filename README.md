@@ -1,30 +1,73 @@
-![cover](https://repository-images.githubusercontent.com/256284214/d6d1cc69-d944-4e4e-97dc-c21fd0db21a5)
+<a href="https://next-js-boilerplate-sable.vercel.app/">
+  <img alt="NextJs Boilerplate" src="https://repository-images.githubusercontent.com/256284214/eb1dcdd6-bd18-4202-a3ee-8b92ed83939d">
+  <h1 align="center">NextJs Boilerplate</h1>
+</a>
 
-# Next.js Boilerplate
+<p align="center">
+  Boilerplate website with NextJs and Tailwindcss
+</p>
 
-Boilerplate for a faster Next.Js workflow.
+<p align="center">
+  <a href="#introduction"><strong>Introduction</strong></a> ·
+  <a href="#one-click-deploy"><strong>One-click Deploy</strong></a> ·
+  <a href="#tech-stack--features"><strong>Tech Stack + Features</strong></a> ·
+  <a href="#author"><strong>Author</strong></a>
+</p>
+<br/>
 
-```
-npx create-next-app --use-pnpm --example https://github.com/alex289/NextJs-Boilerplate
-```
+## Introduction
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **ORM**: [Prisma](https://prisma.io/)
-- **Authentication**: [NextAuth.js](https://next-auth.js.org/)
-- **Deployment**: [Vercel](https://vercel.com)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+This project contains my personal boilerplate for setting up a Nextjs app with authentication, database support and a good UI.
 
-## Overview
+## One-click Deploy
 
-- `pages/*` - All static pages. (Index and 404)
-- `public/*` - Static assets including fonts and images.
-- `styles/*` - A small amount of global styles. I'm mostly using vanilla Tailwind CSS.
+You can deploy this template to Vercel with the button below:
 
-## Running Locally
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falex289%2FNextJs-Boilerplate&env=NEXTAUTH_URL,NEXTAUTH_SECRET,GITHUB_ID,GITHUB_SECRET,DATABASE_URL&envDescription=NEXTAUTH%20and%20GITHUB%20variables%20are%20needed%20for%20auth&envLink=https%3A%2F%2Fgithub.com%2Falex289%2FNextJs-Boilerplate%2Fblob%2Fmain%2F.env.example&project-name=nextjs-boilerplate&repository-name=nextjs-boilerplate&demo-title=NextJs%20Boilerplate%20Demo&demo-description=Boilerplate%20website%20with%20NextJs%20and%20Tailwindcss&demo-url=https%3A%2F%2Fnext-js-boilerplate-sable.vercel.app%2F&demo-image=https%3A%2F%2Frepository-images.githubusercontent.com%2F256284214%2Feb1dcdd6-bd18-4202-a3ee-8b92ed83939d)
+
+You can also clone & create this repo locally with the following command:
 
 ```bash
-$ git clone https://github.com/Alex289/NextJs-Boilerplate.git
-$ cd NextJs-Boilerplate
-$ yarn
-$ yarn dev
+npx create-next-app precedent --example "https://github.com/alex289/NextJs-Boilerplate"
 ```
+
+## Tech Stack + Features
+
+### Frameworks
+
+- [Next.js](https://nextjs.org/) – React framework for building performant apps with the best developer experience
+- [Auth.js](https://authjs.dev/) – Handle user authentication with ease with providers like Google, Twitter, GitHub, etc.
+- [Prisma](https://www.prisma.io/) – Typescript-first ORM for Node.js
+
+### Platforms
+
+- [Vercel](https://vercel.com/) – Easily preview & deploy changes with git (free tier available)
+- [PlanetScale](https://planetscale.com/) – Good SQL Database Provider (free tier available)
+
+### UI
+
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for rapid UI development
+- [HeadlessUI](https://headlessui.com/) – Completely unstyled, fully accessible UI components
+- [Heroicons](https://heroicons.com/) – Beautiful hand-crafted SVG icons
+- [`@next/font`](https://nextjs.org/docs/basic-features/font-optimization) – Optimize custom fonts and remove external network requests for improved performance
+- [`@vercel/og`](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) – Generate dynamic Open Graph images on the edge
+- [`react-wrap-balancer`](https://github.com/shuding/react-wrap-balancer) – Simple React component that makes titles more readable
+
+### Hooks and Utilities
+
+- [swr](https://swr.vercel.app/) – React Hooks for Data Fetching
+- [nprogress](https://ricostacruz.com/nprogress/) – A nanoscopic progress bar
+
+### Code Quality
+
+- [TypeScript](https://www.typescriptlang.org/) – Static type checker for end-to-end typesafety
+- [Prettier](https://prettier.io/) – Opinionated code formatter for consistent code style
+- [ESLint](https://eslint.org/) – Pluggable linter for Next.js and TypeScript
+
+### Miscellaneous
+
+- [Vercel Analytics](https://vercel.com/analytics) – Track unique visitors, pageviews, and more in a privacy-friendly way
+
+## Author
+
+- Alexander Konietzko ([Homepage](https://alexanderkonietzko.vercel.app/))
