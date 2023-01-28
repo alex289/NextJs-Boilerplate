@@ -1,11 +1,7 @@
-import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
-import {
-  ChevronDownIcon,
-  DocumentDuplicateIcon,
-  PencilIcon,
-  TrashIcon,
-} from '@heroicons/react/20/solid';
+
+import { Menu, Transition } from '@headlessui/react';
+import { ChevronDown, Copy, Edit, Trash2 } from 'lucide-react';
 
 export default function UserMenu() {
   return (
@@ -14,7 +10,7 @@ export default function UserMenu() {
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-black hover:bg-opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus-visible:ring-black">
             Options
-            <ChevronDownIcon
+            <ChevronDown
               className="ml-2 -mr-1 h-5 w-5 text-indigo-200 hover:text-indigo-100"
               aria-hidden="true"
             />
@@ -39,9 +35,9 @@ export default function UserMenu() {
                         : 'text-gray-900 dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}>
                     {active ? (
-                      <PencilIcon className="mr-2 h-5 w-5" aria-hidden="true" />
+                      <Edit className="mr-2 h-5 w-5" aria-hidden="true" />
                     ) : (
-                      <PencilIcon
+                      <Edit
                         className="mr-2 h-5 w-5 text-violet-500"
                         aria-hidden="true"
                       />
@@ -59,12 +55,9 @@ export default function UserMenu() {
                         : 'text-gray-900 dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}>
                     {active ? (
-                      <DocumentDuplicateIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
+                      <Copy className="mr-2 h-5 w-5" aria-hidden="true" />
                     ) : (
-                      <DocumentDuplicateIcon
+                      <Copy
                         className="mr-2 h-5 w-5 text-violet-500"
                         aria-hidden="true"
                       />
@@ -83,9 +76,9 @@ export default function UserMenu() {
                         : 'text-gray-900 dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}>
                     {active ? (
-                      <TrashIcon className="mr-2 h-5 w-5" aria-hidden="true" />
+                      <Trash2 className="mr-2 h-5 w-5" aria-hidden="true" />
                     ) : (
-                      <TrashIcon
+                      <Trash2
                         className="mr-2 h-5 w-5 text-violet-500"
                         aria-hidden="true"
                       />
