@@ -32,7 +32,6 @@
   "homepage": "https://next-js-boilerplate-sable.vercel.app",
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.27",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "autoprefixer": "^10.4.13",
@@ -55,10 +54,9 @@
     "next": "13.1.6",
     "next-auth": "^4.19.0",
     "next-themes": "^0.2.1",
-    "nprogress": "^0.2.0",
+    "nextjs-boilerplate": "link:",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "swr": "^2.0.3"
+    "react-dom": "^18.2.0"
   },
   "nextBundleAnalysis": {
     "budget": 102400,
