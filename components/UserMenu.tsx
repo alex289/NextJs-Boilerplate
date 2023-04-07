@@ -11,7 +11,7 @@ export default function UserMenu() {
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-black hover:bg-opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus-visible:ring-black">
             Options
             <ChevronDown
-              className="ml-2 -mr-1 h-5 w-5 text-indigo-200 hover:text-indigo-100"
+              className="-mr-1 ml-2 h-5 w-5 text-indigo-200 hover:text-indigo-100"
               aria-hidden="true"
             />
           </Menu.Button>
