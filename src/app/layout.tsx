@@ -1,14 +1,14 @@
 import Navbar from '@/components/navbar';
 import { Provider } from '@/components/provider';
 import '@/styles/global.css';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
 
 export function generateMetadata(): Metadata {
   return {
-    // metadataBase: new URL(process.env.NEXT_PUBLIC_VERCEL_URL as string),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_VERCEL_URL as string),
     title: {
       default: 'NextJs Boilerplate',
       template: '%s | NextJs Boilerplate',
@@ -51,13 +51,18 @@ export function generateMetadata(): Metadata {
     icons: {
       shortcut: '/static/icon/favicon.ico',
     },
-    themeColor: '#f9fafb',
-    viewport: {
-      width: 'device-width',
-      initialScale: 1,
-    },
   };
 }
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f9fafb' },
+    { media: '(prefers-color-scheme: dark)', color: '#222222' },
+  ],
+  initialScale: 1,
+  width: 'device-width',
+  colorScheme: 'light dark',
+};
 
 const inter = Inter({ subsets: ['latin'] });
 
