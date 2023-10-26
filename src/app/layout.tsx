@@ -8,7 +8,7 @@ import { ReactNode } from 'react';
 
 export function generateMetadata(): Metadata {
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_VERCEL_URL as string),
+    metadataBase: new URL("https://next-js-boilerplate-sable.vercel.app"),
     title: {
       default: 'NextJs Boilerplate',
       template: '%s | NextJs Boilerplate',
