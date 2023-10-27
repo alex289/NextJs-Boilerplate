@@ -1,10 +1,12 @@
-import Navbar from '@/components/navbar';
-import { Provider } from '@/components/provider';
 import '@/styles/global.css';
-import { Metadata, Viewport } from 'next';
 
 import { Inter } from 'next/font/google';
-import { ReactNode } from 'react';
+
+import Navbar from '@/components/navbar';
+import { Provider } from '@/components/provider';
+
+import type { Metadata, Viewport } from 'next';
+import { type ReactNode } from 'react';
 
 export function generateMetadata(): Metadata {
   return {

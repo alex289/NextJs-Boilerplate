@@ -31,6 +31,7 @@
   },
   "homepage": "https://next-js-boilerplate-sable.vercel.app",
   "devDependencies": {
+    "@types/eslint": "^8.44.6",
     "@types/node": "^20.8.9",
     "@types/nprogress": "^0.2.2",
     "@types/react": "^18.2.33",

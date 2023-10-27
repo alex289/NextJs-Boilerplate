@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // eslint-disable-next-line @typescript-eslint/require-await
   async headers() {
     return [
       {
@@ -14,7 +15,7 @@ const nextConfig = {
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' data:;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' data: https://alexanderkonietzko-analytics.vercel.app/script.js;
   child-src 'self';
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
