@@ -1,6 +1,7 @@
 import '@/styles/global.css';
 
-import { Inter } from 'next/font/google';
+import { GeistSans, GeistMono } from 'geist/font';
+import clsx from 'clsx';
 
 import Navbar from '@/components/navbar';
 import { Provider } from '@/components/provider';
@@ -66,11 +67,11 @@ export const viewport: Viewport = {
   colorScheme: 'light dark',
 };
 
-const inter = Inter({ subsets: ['latin'] });
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html className={inter.className} suppressHydrationWarning>
+    <html
+      className={clsx(GeistSans.variable, GeistMono.variable)}
+      suppressHydrationWarning>
       <body className="bg-gray-50 transition-colors duration-500 dark:bg-gray-800 dark:text-gray-100">
         <Provider>
           <Navbar />

@@ -1,5 +1,4 @@
 import { type Config } from 'tailwindcss';
-import { fontFamily } from 'tailwindcss/defaultTheme';
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -21,12 +20,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans],
+        sans: ['var(--font-geist-sans)'],
+        mono: ['var(--font-geist-mono)'],
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 } satisfies Config;

@@ -50,6 +50,8 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@prisma/client": "^5.5.2",
+    "clsx": "^2.0.0",
+    "geist": "^1.0.0",
     "lucide-react": "^0.291.0",
     "next": "14.0.1",
     "next-auth": "^4.24.4",
