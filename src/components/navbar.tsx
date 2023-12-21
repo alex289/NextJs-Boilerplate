@@ -14,9 +14,9 @@ const Navbar = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <nav className="sticky top-0 z-50 mx-auto my-0 flex w-full max-w-5xl items-center justify-between p-3 text-gray-900 dark:text-gray-100 md:my-8 md:p-0">
+    <nav className="sticky top-0 z-50 mx-auto my-0 flex w-full max-w-5xl items-center justify-between p-3 text-gray-900 md:my-8 md:p-0 dark:text-gray-100">
       <div>
-        <h1 className="p-1 text-xl font-semibold text-gray-900 dark:text-gray-100 sm:p-4">
+        <h1 className="p-1 text-xl font-semibold text-gray-900 sm:p-4 dark:text-gray-100">
           <Link href="/">NavTitle</Link>
         </h1>
       </div>
@@ -26,7 +26,7 @@ const Navbar = () => {
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="mr-1 h-10 w-10 rounded-lg bg-gray-200 p-3 ring-gray-300 hover:ring-4 dark:bg-gray-700 md:mr-3"
+          className="mr-1 h-10 w-10 rounded-lg bg-gray-200 p-3 ring-gray-300 hover:ring-4 md:mr-3 dark:bg-gray-700"
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
           {mounted && resolvedTheme === 'dark' ? (
             <Sun fill="#eaeaea" className="h-4 w-4 dark:text-gray-200" />
