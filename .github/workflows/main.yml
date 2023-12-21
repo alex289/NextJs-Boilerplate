@@ -11,6 +11,10 @@ defaults:
   run:
     working-directory: ./
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
