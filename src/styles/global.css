@@ -2,17 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-#nprogress .bar {
-  background: #bb86fc !important;
+* {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 0;
 }
 
-#nprogress .peg {
-  box-shadow:
-    0 0 10px #bb86fc,
-    0 0 5px #bb86fc !important;
+body {
+  min-height: 100dvh;
 }
 
-#nprogress .spinner-icon {
-  border-top-color: #bb86fc !important;
-  border-left-color: #bb86fc !important;
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
