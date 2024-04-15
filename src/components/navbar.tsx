@@ -1,11 +1,11 @@
 'use client';
 
-import Link from 'next/link';
-
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
-import UserMenu from './user-menu';
 import { Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+import UserMenu from './user-menu';
 
 const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();

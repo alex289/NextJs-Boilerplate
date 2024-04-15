@@ -2,6 +2,8 @@
   "name": "nextjs-boilerplate",
   "version": "1.0.0",
   "description": "nextjs boilerplate website with presets",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
@@ -31,6 +33,7 @@
   },
   "homepage": "https://next-js-boilerplate-sable.vercel.app",
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@types/eslint": "^8.56.6",
     "@types/node": "^20.12.2",
     "@types/nprogress": "^0.2.3",

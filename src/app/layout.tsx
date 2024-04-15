@@ -1,14 +1,14 @@
 import '@/styles/global.css';
 
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
 import clsx from 'clsx';
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
+import { type ReactNode } from 'react';
 
 import Navbar from '@/components/navbar';
 import { Provider } from '@/components/provider';
 
 import type { Metadata, Viewport } from 'next';
-import { type ReactNode } from 'react';
 
 export function generateMetadata(): Metadata {
   return {

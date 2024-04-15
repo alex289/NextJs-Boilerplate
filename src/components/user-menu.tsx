@@ -1,7 +1,6 @@
-import { Fragment } from 'react';
-
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDown, Copy, Edit, Trash2 } from 'lucide-react';
+import { Fragment } from 'react';
 
 export default function UserMenu() {
   return (
