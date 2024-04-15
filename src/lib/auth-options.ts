@@ -1,7 +1,8 @@
 import GithubProvider from 'next-auth/providers/github';
 
-import type { NextAuthOptions } from 'next-auth';
 import { env } from '@/env.mjs';
+
+import type { NextAuthOptions } from 'next-auth';
 
 export const authOptions: NextAuthOptions = {
   secret: env.NEXTAUTH_SECRET,

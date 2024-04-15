@@ -5,11 +5,11 @@ import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import { type ReactNode } from 'react';
 
+import { env } from '@/env.mjs';
 import Navbar from '@/components/navbar';
 import { Provider } from '@/components/provider';
 
 import type { Metadata, Viewport } from 'next';
-import { env } from '@/env.mjs';
 
 export function generateMetadata(): Metadata {
   return {
