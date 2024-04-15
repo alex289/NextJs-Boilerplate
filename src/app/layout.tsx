@@ -9,6 +9,7 @@ import Navbar from '@/components/navbar';
 import { Provider } from '@/components/provider';
 
 import type { Metadata, Viewport } from 'next';
+import { env } from '@/env.mjs';
 
 export function generateMetadata(): Metadata {
   return {
@@ -23,11 +24,11 @@ export function generateMetadata(): Metadata {
     openGraph: {
       title: 'NextJs Boilerplate',
       description: 'nextjs boilerplate website with presets',
-      url: process.env.NEXT_PUBLIC_VERCEL_URL,
+      url: env.NEXT_PUBLIC_VERCEL_URL,
       siteName: 'NextJs Boilerplate',
       images: [
         {
-          url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/og`,
+          url: `${env.NEXT_PUBLIC_VERCEL_URL}/api/og`,
           width: 1920,
           height: 1080,
         },
@@ -50,7 +51,7 @@ export function generateMetadata(): Metadata {
       title: 'NextJs Boilerplate',
       card: 'summary_large_image',
       description: 'nextjs boilerplate website with presets',
-      images: [`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/og`],
+      images: [`${env.NEXT_PUBLIC_VERCEL_URL}/api/og`],
     },
     icons: {
       shortcut: '/static/icon/favicon.ico',
