@@ -11,6 +11,7 @@ const config = {
     'prettier',
     'next/core-web-vitals',
   ],
+  // @ts-ignore
   plugins: ['@typescript-eslint'],
   rules: {
     semi: 'warn',
