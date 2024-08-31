@@ -11,8 +11,8 @@ const config = {
     'prettier',
     'next/core-web-vitals',
   ],
-  // @ts-ignore
-  plugins: ['@typescript-eslint'],
+  // @ts-expect-error Something is wrong with the type here
+  plugins: ['@typescript-eslint', 'drizzle'],
   rules: {
     semi: 'warn',
     eqeqeq: 'warn',
@@ -32,7 +32,10 @@ const config = {
       },
     ],
     '@typescript-eslint/no-unnecessary-condition': 'warn',
+    'drizzle/enforce-delete-with-where': 'error',
+    'drizzle/enforce-update-with-where': 'error',
   },
+  ignorePatterns: ['src/components/ui/chart.tsx'],
 };
 
 module.exports = config;

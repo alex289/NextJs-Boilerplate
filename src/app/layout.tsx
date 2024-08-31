@@ -7,7 +7,8 @@ import { type ReactNode } from 'react';
 
 import { env } from '@/env.mjs';
 import Navbar from '@/components/navbar';
-import { Provider } from '@/components/provider';
+import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
 
 import type { Metadata, Viewport } from 'next';
 
@@ -71,14 +72,17 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
-      className={clsx(GeistSans.variable, GeistMono.variable)}
-      suppressHydrationWarning>
-      <body className="bg-gray-50 transition-colors duration-500 dark:bg-gray-800 dark:text-gray-100">
-        <Provider>
+    <html className={clsx(GeistSans.variable, GeistMono.variable)}>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
           <Navbar />
           <main className="px-10">{children}</main>
-        </Provider>
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

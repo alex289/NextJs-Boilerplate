@@ -3,18 +3,6 @@
   <h1 align="center">NextJs Boilerplate</h1>
 </a>
 
-<p align="center">
-  Boilerplate website with NextJs and Tailwindcss
-</p>
-
-<p align="center">
-  <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#one-click-deploy"><strong>One-click Deploy</strong></a> ·
-  <a href="#tech-stack--features"><strong>Tech Stack + Features</strong></a> ·
-  <a href="#author"><strong>Author</strong></a>
-</p>
-<br/>
-
 ## Introduction
 
 This project contains my personal boilerplate for setting up a Nextjs app with authentication, database support and a good UI.
@@ -28,7 +16,7 @@ You can deploy this template to Vercel with the button below:
 You can also clone & create this repo locally with the following command:
 
 ```bash
-npx create-next-app precedent --example "https://github.com/alex289/NextJs-Boilerplate"
+npx create-next-app nextjsapp --example "https://github.com/alex289/NextJs-Boilerplate"
 ```
 
 ## Tech Stack + Features
@@ -42,21 +30,10 @@ npx create-next-app precedent --example "https://github.com/alex289/NextJs-Boile
 ### Platforms
 
 - [Vercel](https://vercel.com/) – Easily preview & deploy changes with git (free tier available)
-- [PlanetScale](https://planetscale.com/) – Good SQL Database Provider (free tier available)
 
 ### UI
 
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for rapid UI development
-- [HeadlessUI](https://headlessui.com/) – Completely unstyled, fully accessible UI components
-- [Heroicons](https://heroicons.com/) – Beautiful hand-crafted SVG icons
-- [`@next/font`](https://nextjs.org/docs/basic-features/font-optimization) – Optimize custom fonts and remove external network requests for improved performance
-- [`@vercel/og`](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) – Generate dynamic Open Graph images on the edge
-- [`react-wrap-balancer`](https://github.com/shuding/react-wrap-balancer) – Simple React component that makes titles more readable
-
-### Hooks and Utilities
-
-- [swr](https://swr.vercel.app/) – React Hooks for Data Fetching
-- [nprogress](https://ricostacruz.com/nprogress/) – A nanoscopic progress bar
 
 ### Code Quality
 
