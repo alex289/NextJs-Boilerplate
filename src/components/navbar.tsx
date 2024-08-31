@@ -80,27 +80,40 @@ export default function Navbar() {
               <span className="sr-only">Acme Inc</span>
             </Link>
             <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground">
+              href="/"
+              className={clsx(
+                'transition-colors hover:text-foreground',
+                isActive('/') ? 'text-foreground' : 'text-muted-foreground',
+              )}>
               Dashboard
             </Link>
             <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground">
-              Orders
+              href="/chart"
+              className={clsx(
+                'transition-colors hover:text-foreground',
+                isActive('/chart')
+                  ? 'text-foreground'
+                  : 'text-muted-foreground',
+              )}>
+              Charts
             </Link>
             <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground">
-              Products
+              href="/table"
+              className={clsx(
+                'transition-colors hover:text-foreground',
+                isActive('/table')
+                  ? 'text-foreground'
+                  : 'text-muted-foreground',
+              )}>
+              Table
             </Link>
             <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground">
-              Customers
-            </Link>
-            <Link href="#" className="hover:text-foreground">
-              Settings
+              href="/form"
+              className={clsx(
+                'transition-colors hover:text-foreground',
+                isActive('/form') ? 'text-foreground' : 'text-muted-foreground',
+              )}>
+              Form
             </Link>
           </nav>
         </SheetContent>
