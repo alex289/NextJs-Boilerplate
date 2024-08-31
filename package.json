@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "nextjs boilerplate website with presets",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
