@@ -1,13 +1,22 @@
 'use client';
 
 import { useQueryState } from 'nuqs';
+import { Suspense } from 'react';
 import { toast } from 'sonner';
 
 import { DialogExample } from '@/components/dialog-example';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-const Index = () => {
+export default function Page() {
+  return (
+    <Suspense>
+      <Client />
+    </Suspense>
+  );
+}
+
+const Client = () => {
   const [name, setName] = useQueryState('name');
   return (
     <>
@@ -33,5 +42,3 @@ const Index = () => {
     </>
   );
 };
-
-export default Index;
