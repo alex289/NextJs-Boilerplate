@@ -17,7 +17,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { ModeToggle } from './theme-toggle';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
@@ -84,48 +89,63 @@ export default function Navbar({ user }: { user?: User }) {
         </SheetTrigger>
         <SheetContent side="left">
           <nav className="grid gap-6 text-lg font-medium">
-            <Link
-              href="#"
-              className="flex items-center gap-2 text-lg font-semibold">
-              <Package2 className="h-6 w-6" />
-              <span className="sr-only">Acme Inc</span>
-            </Link>
-            <Link
-              href="/"
-              className={clsx(
-                'transition-colors hover:text-foreground',
-                isActive('/') ? 'text-foreground' : 'text-muted-foreground',
-              )}>
-              Dashboard
-            </Link>
-            <Link
-              href="/chart"
-              className={clsx(
-                'transition-colors hover:text-foreground',
-                isActive('/chart')
-                  ? 'text-foreground'
-                  : 'text-muted-foreground',
-              )}>
-              Charts
-            </Link>
-            <Link
-              href="/table"
-              className={clsx(
-                'transition-colors hover:text-foreground',
-                isActive('/table')
-                  ? 'text-foreground'
-                  : 'text-muted-foreground',
-              )}>
-              Table
-            </Link>
-            <Link
-              href="/form"
-              className={clsx(
-                'transition-colors hover:text-foreground',
-                isActive('/form') ? 'text-foreground' : 'text-muted-foreground',
-              )}>
-              Form
-            </Link>
+            <SheetClose asChild>
+              <Link
+                href="#"
+                className="flex items-center gap-2 text-lg font-semibold">
+                <Package2 className="h-6 w-6" />
+                <span className="sr-only">Acme Inc</span>
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link
+                href="/"
+                className={clsx(
+                  'transition-colors hover:text-foreground',
+                  isActive('/') ? 'text-foreground' : 'text-muted-foreground',
+                )}>
+                Dashboard
+              </Link>
+            </SheetClose>
+            <SheetClose asChild>
+              <Link
+                href="/chart"
+                className={clsx(
+                  'transition-colors hover:text-foreground',
+                  isActive('/chart')
+                    ? 'text-foreground'
+                    : 'text-muted-foreground',
+                )}>
+                Charts
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link
+                href="/table"
+                className={clsx(
+                  'transition-colors hover:text-foreground',
+                  isActive('/table')
+                    ? 'text-foreground'
+                    : 'text-muted-foreground',
+                )}>
+                Table
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link
+                href="/form"
+                className={clsx(
+                  'transition-colors hover:text-foreground',
+                  isActive('/form')
+                    ? 'text-foreground'
+                    : 'text-muted-foreground',
+                )}>
+                Form
+              </Link>
+            </SheetClose>
           </nav>
         </SheetContent>
       </Sheet>
