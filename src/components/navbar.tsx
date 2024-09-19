@@ -2,7 +2,6 @@
 
 import clsx from 'clsx';
 import { CircleUser, Menu, Package2, Search } from 'lucide-react';
-import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -17,6 +16,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { signIn, signOut } from '@/lib/auth';
 import { ModeToggle } from './theme-toggle';
 
 export default function Navbar({ isLoggedIn }: { isLoggedIn: boolean }) {
@@ -144,7 +144,9 @@ export default function Navbar({ isLoggedIn }: { isLoggedIn: boolean }) {
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuItem>Support</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => signOut()}>
+                Logout
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (

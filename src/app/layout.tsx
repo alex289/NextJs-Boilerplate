@@ -3,13 +3,13 @@ import '@/styles/global.css';
 import clsx from 'clsx';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
-import { getServerSession } from 'next-auth';
 import { Suspense } from 'react';
 
 import { env } from '@/env.mjs';
 import Navbar from '@/components/navbar';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
+import { auth } from '@/lib/auth';
 
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
@@ -77,7 +77,7 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  const session = await getServerSession();
+  const session = await auth();
   return (
     <html
       className={clsx(GeistSans.variable, GeistMono.variable)}

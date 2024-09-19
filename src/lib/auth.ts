@@ -1,10 +1,9 @@
+import NextAuth from 'next-auth';
 import GithubProvider from 'next-auth/providers/github';
 
 import { env } from '@/env.mjs';
 
-import type { NextAuthOptions } from 'next-auth';
-
-export const authOptions: NextAuthOptions = {
+export const { auth, handlers, signIn, signOut } = NextAuth({
   secret: env.NEXTAUTH_SECRET,
   theme: {
     colorScheme: 'auto',
@@ -17,4 +16,4 @@ export const authOptions: NextAuthOptions = {
       clientSecret: env.GITHUB_SECRET,
     }),
   ],
-};
+});
