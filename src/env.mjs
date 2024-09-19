@@ -9,6 +9,7 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(['development', 'test', 'production'])
       .default('development'),
+    POSTGRES_URL: z.string().url(),
   },
   client: {
     NEXT_PUBLIC_VERCEL_URL: z.string().url(),

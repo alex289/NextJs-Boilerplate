@@ -1,44 +1,10 @@
-'use client';
+import { db } from '@/db';
+import { users } from '@/db/schema/users';
+import { count } from 'drizzle-orm';
 
-import { useQueryState } from 'nuqs';
-import { Suspense } from 'react';
-import { toast } from 'sonner';
+import { PageClient } from './page.client';
 
-import { DialogExample } from '@/components/dialog-example';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-
-export default function Page() {
-  return (
-    <Suspense>
-      <Client />
-    </Suspense>
-  );
+export default async function Page() {
+  const usersCount = await db.select({ count: count() }).from(users);
+  return <PageClient usersCount={usersCount[0]!.count} />;
 }
-
-const Client = () => {
-  const [name, setName] = useQueryState('name');
-  return (
-    <>
-      <div className="flex justify-center my-4">
-        <h1 className="text-5xl font-extrabold leading-normal text-gray-700 dark:text-gray-200 md:text-[5rem]">
-          Next.Js <span className="text-indigo-500">Boilerplate</span>
-        </h1>
-      </div>
-
-      <div className="flex md:flex-row flex-col gap-4">
-        <Button onClick={() => toast('Event has been created.')}>
-          Toast example
-        </Button>
-
-        <DialogExample />
-
-        <Input
-          value={name ?? ''}
-          onChange={(e) => setName(e.target.value)}
-          className="w-50"
-        />
-      </div>
-    </>
-  );
-};

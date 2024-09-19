@@ -23,7 +23,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { ModeToggle } from './theme-toggle';
+import { ThemeToggle } from './theme-toggle';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
 function getInitials(name: string) {
@@ -186,7 +186,7 @@ export default function Navbar({ user }: { user?: User }) {
         ) : (
           <Button onClick={() => signIn('github')}>Login</Button>
         )}
-        <ModeToggle />
+        <ThemeToggle />
       </div>
     </header>
   );
