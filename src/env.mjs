@@ -13,12 +13,15 @@ export const env = createEnv({
   client: {
     NEXT_PUBLIC_VERCEL_URL: z.string().url(),
   },
-  runtimeEnv: {
-    GITHUB_ID: process.env.GITHUB_ID,
-    GITHUB_SECRET: process.env.GITHUB_SECRET,
-    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
-    NODE_ENV: process.env.NODE_ENV,
+  experimental__runtimeEnv: {
     NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
+  },
+  onValidationError: (error) => {
+    console.error(
+      'Invalid environment variables:',
+      error.flatten().fieldErrors,
+    );
+    process.exit(1);
   },
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,
   emptyStringAsUndefined: true,

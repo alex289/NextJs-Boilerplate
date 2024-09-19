@@ -1,3 +1,5 @@
+// TODO: Import env when config is available in ts
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,

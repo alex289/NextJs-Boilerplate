@@ -1,15 +1,10 @@
 'use server';
 
-import { z } from 'zod';
-
 import { actionClient } from '@/lib/safe-action';
-
-const schema = z.object({
-  username: z.string().min(3).max(10),
-});
+import userSchema from './schema';
 
 export const loginUser = actionClient
-  .schema(schema)
+  .schema(userSchema)
   // eslint-disable-next-line @typescript-eslint/require-await
   .action(async ({ parsedInput: { username } }) => {
     if (username === 'johndoe') {

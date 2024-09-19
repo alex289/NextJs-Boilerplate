@@ -16,7 +16,6 @@ const payments: Payment[] = [
     status: 'processing',
     email: 'example@gmail.com',
   },
-  // ...
 ];
 
 export default function Table() {

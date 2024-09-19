@@ -12,7 +12,7 @@ const config = {
     'next/core-web-vitals',
   ],
   // @ts-expect-error Something is wrong with the type here
-  plugins: ['@typescript-eslint', 'drizzle'],
+  plugins: ['@typescript-eslint', 'drizzle', 'check-file'],
   rules: {
     semi: 'warn',
     eqeqeq: 'warn',
@@ -34,6 +34,21 @@ const config = {
     '@typescript-eslint/no-unnecessary-condition': 'warn',
     'drizzle/enforce-delete-with-where': 'error',
     'drizzle/enforce-update-with-where': 'error',
+    'check-file/filename-naming-convention': [
+      'error',
+      {
+        '**/*.{ts,tsx}': 'KEBAB_CASE',
+      },
+      {
+        ignoreMiddleExtensions: true,
+      },
+    ],
+    'check-file/folder-naming-convention': [
+      'error',
+      {
+        'src/**/!^[.*': 'KEBAB_CASE',
+      },
+    ],
   },
   ignorePatterns: ['src/components/ui/chart.tsx'],
 };

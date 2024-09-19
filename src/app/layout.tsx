@@ -3,7 +3,8 @@ import '@/styles/global.css';
 import clsx from 'clsx';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
-import { type ReactNode } from 'react';
+import { getServerSession } from 'next-auth';
+import { Suspense } from 'react';
 
 import { env } from '@/env.mjs';
 import Navbar from '@/components/navbar';
@@ -11,10 +12,11 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 
 import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
 
 export function generateMetadata(): Metadata {
   return {
-    metadataBase: new URL('https://next-js-boilerplate-sable.vercel.app'),
+    metadataBase: new URL('https://alex-boilerplate.vercel.app'),
     title: {
       default: 'NextJs Boilerplate',
       template: '%s | NextJs Boilerplate',
@@ -70,17 +72,26 @@ export const viewport: Viewport = {
   colorScheme: 'light dark',
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  const session = await getServerSession();
   return (
-    <html className={clsx(GeistSans.variable, GeistMono.variable)}>
+    <html
+      className={clsx(GeistSans.variable, GeistMono.variable)}
+      suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange>
-          <Navbar />
-          <main className="px-10">{children}</main>
+          <Navbar isLoggedIn={!!session} />
+          <main className="px-10">
+            <Suspense>{children}</Suspense>
+          </main>
           <Toaster />
         </ThemeProvider>
       </body>

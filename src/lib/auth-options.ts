@@ -9,7 +9,7 @@ export const authOptions: NextAuthOptions = {
   theme: {
     colorScheme: 'auto',
     brandColor: '',
-    logo: 'https://next-js-boilerplate-sable.vercel.app/static/icon/favicon.ico',
+    logo: 'https://alex-boilerplate.vercel.app/static/icon/favicon.ico',
   },
   providers: [
     GithubProvider({
