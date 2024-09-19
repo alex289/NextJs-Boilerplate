@@ -81,12 +81,8 @@
           "name": "boilerplate_account_userId_boilerplate_user_id_fk",
           "tableFrom": "boilerplate_account",
           "tableTo": "boilerplate_user",
-          "columnsFrom": [
-            "userId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["userId"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -94,10 +90,7 @@
       "compositePrimaryKeys": {
         "boilerplate_account_provider_providerAccountId_pk": {
           "name": "boilerplate_account_provider_providerAccountId_pk",
-          "columns": [
-            "provider",
-            "providerAccountId"
-          ]
+          "columns": ["provider", "providerAccountId"]
         }
       },
       "uniqueConstraints": {}
@@ -161,12 +154,8 @@
           "name": "boilerplate_authenticator_userId_boilerplate_user_id_fk",
           "tableFrom": "boilerplate_authenticator",
           "tableTo": "boilerplate_user",
-          "columnsFrom": [
-            "userId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["userId"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -174,19 +163,14 @@
       "compositePrimaryKeys": {
         "boilerplate_authenticator_userId_credentialID_pk": {
           "name": "boilerplate_authenticator_userId_credentialID_pk",
-          "columns": [
-            "userId",
-            "credentialID"
-          ]
+          "columns": ["userId", "credentialID"]
         }
       },
       "uniqueConstraints": {
         "boilerplate_authenticator_credentialID_unique": {
           "name": "boilerplate_authenticator_credentialID_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "credentialID"
-          ]
+          "columns": ["credentialID"]
         }
       }
     },
@@ -219,12 +203,8 @@
           "name": "boilerplate_session_userId_boilerplate_user_id_fk",
           "tableFrom": "boilerplate_session",
           "tableTo": "boilerplate_user",
-          "columnsFrom": [
-            "userId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["userId"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -274,9 +254,7 @@
         "boilerplate_user_email_unique": {
           "name": "boilerplate_user_email_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "email"
-          ]
+          "columns": ["email"]
         }
       }
     },
@@ -308,10 +286,7 @@
       "compositePrimaryKeys": {
         "boilerplate_verificationToken_identifier_token_pk": {
           "name": "boilerplate_verificationToken_identifier_token_pk",
-          "columns": [
-            "identifier",
-            "token"
-          ]
+          "columns": ["identifier", "token"]
         }
       },
       "uniqueConstraints": {}
