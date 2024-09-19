@@ -1,71 +1,74 @@
 import { ImageResponse } from 'next/og';
-import { type NextRequest } from 'next/server';
 
 export const runtime = 'edge';
 
-export function GET(req: NextRequest) {
-  try {
-    const { searchParams } = new URL(req.url);
+export function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const title = searchParams.get('title') ?? 'Next.js Boilerplate';
+  const subtitle = searchParams.get('subtitle') ?? 'Welcome to our website';
 
-    const hasTitle = searchParams.has('title');
-    const title = hasTitle
-      ? searchParams.get('title')?.slice(0, 100)
-      : 'Next.js Boilerplate';
-
-    return new ImageResponse(
-      (
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          justifyContent: 'flex-end',
+          backgroundColor: 'hsl(240 10% 3.9%)',
+          padding: 80,
+          fontFamily: 'Inter',
+        }}>
         <div
           style={{
-            height: '100%',
-            width: '100%',
+            color: 'hsl(0 0% 98%)',
+            fontSize: 70,
+            fontWeight: 600,
+            lineHeight: 1.2,
+            marginBottom: 16,
+            maxWidth: '70%',
+          }}>
+          {title}
+        </div>
+        <div
+          style={{
+            color: 'hsl(240 5% 64.9%)',
+            fontSize: 36,
+            fontWeight: 500,
+            marginBottom: 40,
+          }}>
+          {subtitle}
+        </div>
+        <div
+          style={{
             display: 'flex',
-            textAlign: 'center',
             alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            flexWrap: 'nowrap',
-            backgroundColor: 'white',
-            backgroundImage:
-              'radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%)',
-            backgroundSize: '100px 100px',
           }}>
           <div
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <svg
-              height={80}
-              viewBox="0 0 75 65"
-              fill="black"
-              style={{ margin: '0 75px' }}>
-              <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
-            </svg>
-          </div>
+              width: 32,
+              height: 32,
+              borderRadius: '50%',
+              background: 'hsl(142.1 76.2% 36.3%)',
+              marginRight: 16,
+            }}
+          />
           <div
             style={{
-              display: 'flex',
-              fontSize: 40,
-              fontStyle: 'normal',
-              color: 'black',
-              marginTop: 30,
-              lineHeight: 1.8,
-              whiteSpace: 'pre-wrap',
+              color: 'hsl(240 5% 64.9%)',
+              fontSize: 24,
+              fontWeight: 500,
             }}>
-            <b>{title}</b>
+            Boilerplate company
           </div>
         </div>
-      ),
-      {
-        width: 1200,
-        height: 630,
-      },
-    );
-  } catch (e) {
-    console.error(e);
-    return new Response(`Failed to generate the image`, {
-      status: 500,
-    });
-  }
+      </div>
+    ),
+    {
+      width: 1200,
+      height: 630,
+    },
+  );
 }
