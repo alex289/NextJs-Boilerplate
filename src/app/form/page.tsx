@@ -49,8 +49,8 @@ export default function FormPage() {
     onError: ({ error }) => {
       setIsLoading(false);
 
-      if (error.fetchError) {
-        toast.error(error.fetchError);
+      if (error.bindArgsValidationErrors) {
+        toast.error(error.bindArgsValidationErrors);
         return;
       }
       if (error.serverError) {
