@@ -4,7 +4,7 @@ import GithubProvider from 'next-auth/providers/github';
 import { env } from '@/env.mjs';
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
-  secret: env.NEXTAUTH_SECRET,
+  secret: env.AUTH_SECRET,
   theme: {
     colorScheme: 'auto',
     brandColor: '',
@@ -12,8 +12,8 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
   },
   providers: [
     GithubProvider({
-      clientId: env.GITHUB_ID,
-      clientSecret: env.GITHUB_SECRET,
+      clientId: env.AUTH_GITHUB_ID,
+      clientSecret: env.AUTH_GITHUB_SECRET,
     }),
   ],
 });

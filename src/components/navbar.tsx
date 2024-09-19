@@ -1,7 +1,9 @@
 'use client';
 
 import clsx from 'clsx';
-import { CircleUser, Menu, Package2, Search } from 'lucide-react';
+import { Menu, Package2, Search } from 'lucide-react';
+import { type User } from 'next-auth';
+import { signIn, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -16,13 +18,21 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { signIn, signOut } from '@/lib/auth';
 import { ModeToggle } from './theme-toggle';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
-export default function Navbar({ isLoggedIn }: { isLoggedIn: boolean }) {
+function getInitials(name: string) {
+  const parts = name.split(' ');
+  const initials = parts
+    .slice(0, 3)
+    .map((part) => part.charAt(0).toUpperCase());
+  return initials.join('');
+}
+
+export default function Navbar({ user }: { user?: User }) {
   const pathname = usePathname();
-
   const isActive = (href: string) => pathname === href;
+
   return (
     <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
@@ -130,16 +140,20 @@ export default function Navbar({ isLoggedIn }: { isLoggedIn: boolean }) {
             />
           </div>
         </form>
-        {isLoggedIn ? (
+        {user ? (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full">
-                <CircleUser className="h-5 w-5" />
-                <span className="sr-only">Toggle user menu</span>
+                <Avatar>
+                  <AvatarImage src={user.image ?? ''} alt={user.email ?? ''} />
+                  <AvatarFallback>
+                    {getInitials(user.name ?? '')}
+                  </AvatarFallback>
+                </Avatar>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuLabel>{user.name}</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuItem>Support</DropdownMenuItem>

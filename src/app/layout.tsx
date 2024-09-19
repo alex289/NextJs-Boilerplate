@@ -88,7 +88,7 @@ export default async function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange>
-          <Navbar isLoggedIn={!!session} />
+          <Navbar user={session?.user} />
           <main className="px-10">
             <Suspense>{children}</Suspense>
           </main>
