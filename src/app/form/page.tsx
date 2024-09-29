@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import ShineBorder from '@/components/ui/shine-border';
 import { loginUser } from './profile-action';
 import userSchema from './schema';
 
@@ -67,9 +68,13 @@ export default function FormPage() {
   });
 
   return (
-    <div className="container mx-auto py-10">
+    <ShineBorder
+      className="container mx-auto py-10 w-full mt-4"
+      color={['#A07CFE', '#FE8FB5', '#FFBE7B']}>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-8 w-full p-2 z-10">
           <FormField
             control={form.control}
             name="username"
@@ -91,6 +96,6 @@ export default function FormPage() {
           </Button>
         </form>
       </Form>
-    </div>
+    </ShineBorder>
   );
 }
