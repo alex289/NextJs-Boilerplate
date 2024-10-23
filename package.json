@@ -96,7 +96,8 @@
   },
   "pnpm": {
     "overrides": {
-      "@types/react": "npm:types-react@19.0.0-rc.1"
+      "@types/react": "npm:types-react@19.0.0-rc.1",
+      "react-is": "^19.0.0-beta-26f2496093-20240514"
     }
   }
 }
