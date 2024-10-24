@@ -1,21 +1,27 @@
 import js from '@eslint/js';
 // import drizzlePlugin from 'eslint-plugin-drizzle';
-import nextPlugin from 'eslint-config-next/core-web-vitals';
-// import eslintConfigPrettier from 'eslint-config-prettier';
+import nextPlugin from '@next/eslint-plugin-next';
 import checkFile from 'eslint-plugin-check-file';
 import tseslint from 'typescript-eslint';
 
 export default [
   js.configs.recommended,
-  nextPlugin,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
   {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
     plugins: {
       'check-file': checkFile,
+      '@next/next': nextPlugin,
       //   drizzle: drizzlePlugin,
     },
     rules: {
+      ...nextPlugin.configs.recommended.rules,
       semi: 'warn',
       eqeqeq: 'warn',
       curly: 'warn',
@@ -37,8 +43,8 @@ export default [
         },
       ],
       '@typescript-eslint/no-unnecessary-condition': 'warn',
-      'drizzle/enforce-delete-with-where': 'error',
-      'drizzle/enforce-update-with-where': 'error',
+      // 'drizzle/enforce-delete-with-where': 'error',
+      // 'drizzle/enforce-update-with-where': 'error',
       'check-file/filename-naming-convention': [
         'error',
         {
