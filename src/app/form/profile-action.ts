@@ -5,7 +5,6 @@ import userSchema from './schema';
 
 export const loginUser = actionClient
   .schema(userSchema)
-  // eslint-disable-next-line @typescript-eslint/require-await
   .action(async ({ parsedInput: { username } }) => {
     if (username === 'johndoe') {
       return {
