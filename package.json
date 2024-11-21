@@ -92,11 +92,5 @@
     "budget": 102400,
     "budgetPercentIncreaseRed": 20,
     "showDetails": true
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "npm:types-react@19.0.0-alpha.3",
-      "react-is": "^19.0.0-beta-26f2496093-20240514"
-    }
   }
 }
