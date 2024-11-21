@@ -8,19 +8,20 @@ import { cn } from '@/lib/utils';
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: '', dark: '.dark' } as const;
 
-export type ChartConfig = {
-  [k in string]: {
+export type ChartConfig = Record<
+  string,
+  {
     label?: React.ReactNode;
     icon?: React.ComponentType;
   } & (
     | { color?: string; theme?: never }
     | { color?: never; theme: Record<keyof typeof THEMES, string> }
-  );
-};
+  )
+>;
 
-type ChartContextProps = {
+interface ChartContextProps {
   config: ChartConfig;
-};
+}
 
 const ChartContext = React.createContext<ChartContextProps | null>(null);
 
@@ -68,6 +69,7 @@ ChartContainer.displayName = 'Chart';
 
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     ([_, config]) => config.theme || config.color,
   );
 
@@ -351,9 +353,9 @@ function getPayloadConfigFromPayload(
 
 export {
   ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
   ChartLegend,
   ChartLegendContent,
   ChartStyle,
+  ChartTooltip,
+  ChartTooltipContent,
 };

@@ -3,6 +3,7 @@ import '@/styles/global.css';
 import clsx from 'clsx';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { Suspense } from 'react';
 
 import { env } from '@/env.mjs';
@@ -83,17 +84,19 @@ export default async function RootLayout({
       className={clsx(GeistSans.variable, GeistMono.variable)}
       suppressHydrationWarning>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange>
-          <Navbar user={session?.user} />
-          <main className="px-10">
-            <Suspense>{children}</Suspense>
-          </main>
-          <Toaster />
-        </ThemeProvider>
+        <NuqsAdapter>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange>
+            <Navbar user={session?.user} />
+            <main className="px-10">
+              <Suspense>{children}</Suspense>
+            </main>
+            <Toaster />
+          </ThemeProvider>
+        </NuqsAdapter>
       </body>
     </html>
   );
