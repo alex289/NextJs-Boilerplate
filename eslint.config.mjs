@@ -2,6 +2,7 @@ import js from '@eslint/js';
 // import drizzlePlugin from 'eslint-plugin-drizzle';
 import nextPlugin from '@next/eslint-plugin-next';
 import checkFile from 'eslint-plugin-check-file';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default [
@@ -10,6 +11,10 @@ export default [
   ...tseslint.configs.stylistic,
   {
     languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
@@ -22,6 +27,7 @@ export default [
     },
     rules: {
       ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
       semi: 'warn',
       eqeqeq: 'warn',
       curly: 'warn',
