@@ -6,5 +6,5 @@ import { PageClient } from './page.client';
 
 export default async function Page() {
   const usersCount = await db.select({ count: count() }).from(users);
-  return <PageClient usersCount={usersCount[0]!.count} />;
+  return <PageClient usersCount={usersCount[0]?.count ?? 0} />;
 }
