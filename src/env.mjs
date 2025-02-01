@@ -17,11 +17,8 @@ export const env = createEnv({
   experimental__runtimeEnv: {
     NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
   },
-  onValidationError: (error) => {
-    console.error(
-      'Invalid environment variables:',
-      error.flatten().fieldErrors,
-    );
+  onValidationError: (errors) => {
+    console.error('Invalid environment variables:', errors);
     process.exit(1);
   },
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,
