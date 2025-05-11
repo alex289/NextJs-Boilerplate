@@ -6,7 +6,9 @@ import { oAuthProxy } from 'better-auth/plugins';
 import { env } from '@/env.mjs';
 
 export const auth = betterAuth({
-  baseURL: env.NEXT_PUBLIC_VERCEL_URL,
+  baseURL: env.NEXT_PUBLIC_VERCEL_URL.startsWith('http')
+    ? env.NEXT_PUBLIC_VERCEL_URL
+    : 'http://' + env.NEXT_PUBLIC_VERCEL_URL,
   database: drizzleAdapter(db, {
     provider: 'pg',
   }),
