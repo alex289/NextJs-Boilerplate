@@ -13,7 +13,24 @@ export const env = createEnv({
     POSTGRES_URL: z.string().url(),
   },
   client: {
-    NEXT_PUBLIC_VERCEL_URL: z.string().url(),
+    NEXT_PUBLIC_VERCEL_URL: z
+      .string()
+      .transform((val) => {
+        return val.startsWith('http') ? val : 'https://' + val;
+      })
+      .refine(
+        (val) => {
+          try {
+            new URL(val);
+            return true;
+          } catch {
+            return false;
+          }
+        },
+        {
+          message: 'Invalid URL',
+        },
+      ),
   },
   experimental__runtimeEnv: {
     NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
