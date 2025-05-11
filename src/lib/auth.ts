@@ -5,7 +5,6 @@ import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { env } from '@/env.mjs';
 
 export const auth = betterAuth({
-  baseURL: env.NEXT_PUBLIC_VERCEL_URL,
   database: drizzleAdapter(db, {
     provider: 'pg',
   }),
