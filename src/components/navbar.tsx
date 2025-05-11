@@ -185,7 +185,9 @@ export default function Navbar({ user }: { user?: User }) {
         ) : (
           <Button
             onClick={async () =>
-              await authClient.signIn.social({ provider: 'github' })
+              await authClient.signIn.social({
+                provider: 'github',
+              })
             }>
             Login
           </Button>

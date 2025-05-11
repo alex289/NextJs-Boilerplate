@@ -1,12 +1,11 @@
 import { db } from '@/db';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
-import { oAuthProxy } from 'better-auth/plugins';
 
 import { env } from '@/env.mjs';
 
 export const auth = betterAuth({
-  // baseURL: env.NEXT_PUBLIC_VERCEL_URL,
+  baseURL: env.NEXT_PUBLIC_VERCEL_URL,
   database: drizzleAdapter(db, {
     provider: 'pg',
   }),
@@ -17,5 +16,5 @@ export const auth = betterAuth({
       redirectURI: env.BETTER_AUTH_REDIRECT_PROXY_URL,
     },
   },
-  plugins: [oAuthProxy()],
+  // plugins: [oAuthProxy()],
 });
