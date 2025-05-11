@@ -1,9 +1,8 @@
 'use client';
 
+import { type User } from 'better-auth';
 import clsx from 'clsx';
 import { Menu, Package2, Search } from 'lucide-react';
-import { type User } from 'next-auth';
-import { signIn, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -23,6 +22,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { authClient } from '@/lib/auth-client';
 import { ThemeToggle } from './theme-toggle';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
@@ -165,10 +165,8 @@ export default function Navbar({ user }: { user?: User }) {
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full">
                 <Avatar>
-                  <AvatarImage src={user.image ?? ''} alt={user.email ?? ''} />
-                  <AvatarFallback>
-                    {getInitials(user.name ?? '')}
-                  </AvatarFallback>
+                  <AvatarImage src={user.image ?? ''} alt={user.email} />
+                  <AvatarFallback>{getInitials(user.name)}</AvatarFallback>
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>
@@ -178,13 +176,19 @@ export default function Navbar({ user }: { user?: User }) {
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuItem>Support</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => signOut()}>
+              <DropdownMenuItem
+                onClick={async () => await authClient.signOut()}>
                 Logout
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (
-          <Button onClick={() => signIn('github')}>Login</Button>
+          <Button
+            onClick={async () =>
+              await authClient.signIn.social({ provider: 'github' })
+            }>
+            Login
+          </Button>
         )}
         <ThemeToggle />
       </div>

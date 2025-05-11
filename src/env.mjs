@@ -3,9 +3,10 @@ import { z } from 'zod';
 
 export const env = createEnv({
   server: {
-    AUTH_GITHUB_ID: z.string(),
-    AUTH_GITHUB_SECRET: z.string(),
-    AUTH_SECRET: z.string(),
+    GITHUB_CLIENT_ID: z.string(),
+    GITHUB_CLIENT_SECRET: z.string(),
+    BETTER_AUTH_SECRET: z.string(),
+    BETTER_AUTH_REDIRECT_PROXY_URL: z.string(),
     NODE_ENV: z
       .enum(['development', 'test', 'production'])
       .default('development'),

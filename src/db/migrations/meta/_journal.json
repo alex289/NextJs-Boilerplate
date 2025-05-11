@@ -8,6 +8,20 @@
       "when": 1726777395991,
       "tag": "0000_normal_hobgoblin",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1746965366330,
+      "tag": "0001_dusty_prowler",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1746965384273,
+      "tag": "0002_overrated_warlock",
+      "breakpoints": true
     }
   ]
 }

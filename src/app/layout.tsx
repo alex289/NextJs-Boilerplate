@@ -3,6 +3,7 @@ import '@/styles/global.css';
 import clsx from 'clsx';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
+import { headers } from 'next/headers';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { Suspense } from 'react';
 
@@ -78,7 +79,9 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  const session = await auth();
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
   return (
     <html
       className={clsx(GeistSans.variable, GeistMono.variable)}

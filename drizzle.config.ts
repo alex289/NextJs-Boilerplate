@@ -8,7 +8,7 @@ export default defineConfig({
   dialect: 'postgresql',
   out: './src/db/migrations',
   dbCredentials: {
-    url: process.env.POSTGRES_URL!,
+    url: process.env.POSTGRES_URL as string,
   },
   migrations: {
     schema: 'public',
