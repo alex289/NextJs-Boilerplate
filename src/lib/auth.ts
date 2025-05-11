@@ -12,7 +12,7 @@ export const auth = betterAuth({
     github: {
       clientId: env.GITHUB_CLIENT_ID,
       clientSecret: env.GITHUB_CLIENT_SECRET,
-      redirectURI: env.BETTER_AUTH_REDIRECT_PROXY_URL,
+      // redirectURI: env.BETTER_AUTH_REDIRECT_PROXY_URL,
     },
   },
   // plugins: [oAuthProxy()],
