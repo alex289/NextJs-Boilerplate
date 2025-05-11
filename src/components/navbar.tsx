@@ -4,7 +4,7 @@ import { type User } from 'better-auth';
 import clsx from 'clsx';
 import { Menu, Package2, Search } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -35,6 +35,7 @@ function getInitials(name: string) {
 }
 
 export default function Navbar({ user }: { user?: User }) {
+  const router = useRouter();
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
 
@@ -177,7 +178,15 @@ export default function Navbar({ user }: { user?: User }) {
               <DropdownMenuItem>Support</DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem
-                onClick={async () => await authClient.signOut()}>
+                onClick={async () =>
+                  await authClient.signOut({
+                    fetchOptions: {
+                      onSuccess: () => {
+                        router.push('/');
+                      },
+                    },
+                  })
+                }>
                 Logout
               </DropdownMenuItem>
             </DropdownMenuContent>
