@@ -5,6 +5,7 @@
 
 ## Introduction
 
+s
 This project contains my personal boilerplate for setting up a Nextjs app with authentication, database support and a good UI.
 
 ## One-click Deploy
