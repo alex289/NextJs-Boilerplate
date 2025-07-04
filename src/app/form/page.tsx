@@ -38,22 +38,18 @@ export default function FormPage() {
     onSuccess: ({ data }) => {
       setIsLoading(false);
 
-      if (data?.success) {
+      if (data.success) {
         toast.success(data.success);
         return;
       }
 
-      if (data?.failure) {
+      if (data.failure) {
         toast.error(data.failure);
       }
     },
     onError: ({ error }) => {
       setIsLoading(false);
 
-      if (error.bindArgsValidationErrors) {
-        toast.error(error.bindArgsValidationErrors);
-        return;
-      }
       if (error.serverError) {
         toast.error(error.serverError);
         return;
