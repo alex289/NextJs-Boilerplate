@@ -2,6 +2,7 @@ import { type NextConfig } from 'next';
 
 const nextConfig = {
   reactStrictMode: true,
+  typedRoutes: true,
   async headers() {
     return [
       {

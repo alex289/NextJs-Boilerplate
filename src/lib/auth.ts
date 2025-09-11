@@ -1,11 +1,12 @@
 import { db } from '@/db';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
-import { oAuthProxy } from 'better-auth/plugins/oauth-proxy';
+import { oAuthProxy } from 'better-auth/plugins';
 
 import { env } from '@/env.mjs';
 
 export const auth = betterAuth({
+  telemetry: { enabled: false },
   database: drizzleAdapter(db, {
     provider: 'pg',
   }),
