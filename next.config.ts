@@ -3,6 +3,8 @@ import { type NextConfig } from 'next';
 const nextConfig = {
   reactStrictMode: true,
   typedRoutes: true,
+  reactCompiler: true,
+  cacheComponents: true,
   async headers() {
     return [
       {
