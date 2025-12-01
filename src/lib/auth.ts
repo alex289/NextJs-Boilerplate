@@ -1,6 +1,6 @@
 import { db } from '@/db';
-import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
+import { betterAuth } from 'better-auth/minimal';
 import { oAuthProxy } from 'better-auth/plugins';
 
 import { env } from '@/env.mjs';
@@ -18,4 +18,7 @@ export const auth = betterAuth({
     },
   },
   plugins: [oAuthProxy()],
+  experimental: {
+    joins: true,
+  },
 });
